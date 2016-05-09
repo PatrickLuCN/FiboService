@@ -31,7 +31,6 @@ The quick way is use the provided `make` file.
  
 ```
 $ make install
-
 ```
 
 Starting and Stopping Services:
@@ -62,14 +61,30 @@ To calculate the fibonacci number via the RESTful micro-service, you can refer t
 http://127.0.0.1:5000/calc/api/v1.0/fibo/<$int_number>
 ```
 
-The `<$int_number>` is the Fibonacci number that you want to calculate
+The `<$int_number>` is the Fibonacci number that you want to calculate.
 
-To do the test, you can try:
+e.g:
 
 ```
+ubuntu:~/FiboService$ curl -i http://localhost:5000/calc/api/v1.0/fibo/2
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 57
+Server: Werkzeug/0.11.9 Python/2.7.11+
+Date: Mon, 09 May 2016 09:41:09 GMT
 
+{
+  "rst": {
+    "fiNumber": "0 1",
+    "number": 2
+  }
+}
+```
+
+To run integration test, you can try below method.
+
+```
 $ make test
-
 ```
 
 Enjoy it! :smiley:
