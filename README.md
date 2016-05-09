@@ -36,13 +36,13 @@ $ make install
 ##Starting and Stopping Services:
 ==============================
 
-###To launch the service:
+* To launch the service:
 
 ```
 $ make launch
 ```
 
-###To stop the service:
+* To stop the service:
 
 ```
 $ make shutdown
@@ -53,8 +53,8 @@ Test and run
 
 To calculate the fibonacci number via the RESTful micro-service, you can refer to below steps:
 
-### Start the Micro Service
-### Access below URL to do the calculation:
+* Start the Micro Service
+* Access below URL to do the calculation:
 
 ```
 http://127.0.0.1:5000/calc/api/v1.0/fibo/<$int_number>
@@ -80,7 +80,7 @@ Date: Mon, 09 May 2016 09:41:09 GMT
 }
 ```
 
-### To run integration test, you can try below method.
+* To run integration test, you can try below method.
 
 ```
 $ make test
