@@ -27,26 +27,33 @@ Install/Deploy
 
 The quick way is use the provided `make` file.                                                         │
                                                                                                        │
-<code>                                                                                                 │
-$ make install                                                                                         │
-</code>
+```                                                                                                 │
 
+$ make install                                                                                         │
+
+
+```
 
 Starting and Stopping Services                                                                         │
 ==============================
 
 To launch the service:
 
-<code>
+```
+
 $ make launch
-</code>
+
+
+```
 
 To stop the service:
 
-<code>
-$ make shutdown
-</code>
+```
 
+$ make shutdown
+
+
+```
 
 Test and run
 =============
@@ -55,13 +62,19 @@ To calculate the fibonacci number via the RESTful micro-service, you can refer t
 
 1. Start the Micro Service
 2. Access below URL to do the calculation:
-<code>
+
+```
+
 http://127.0.0.1:5000/calc/api/v1.0/fibo/<$int_number>
+
+```
 
 The <$int_number> is the Fibonacci number that you want to calculate
 
 To do the test, you can try:
 
-<code>
+```
+
 $ make test
-</code>
+
+```
