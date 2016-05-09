@@ -18,7 +18,8 @@ Requirements
 ============
 
 * Python 2.7
-* Python Flask library is required
+* virtualenv is recommened to install before deploy the service (or the makefile will complain)
+* Python Flask library is required (this will be covered if you choose to use makefile)
 * Works on Linux, Windows, Mac OSX and (quite possibly) BSD.
 
 
