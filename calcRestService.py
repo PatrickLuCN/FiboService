@@ -7,7 +7,7 @@ from flask import abort
 app = Flask(__name__)
 
 rst = [
-    { 
+    {
         'number': 1,
         'fiNumber': u'0 '
     },
@@ -35,7 +35,7 @@ def gen_fibo(number):
     if number > 0:
         for x in fib(number):
             fiNumList.append(x)
-            fiNumber = ' '.join(map(str, fiNumList)) 
+            fiNumber = ' '.join(map(str, fiNumList))
     rst[0]['number'] = number
     rst[0]['fiNumber'] = fiNumber
 

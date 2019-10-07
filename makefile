@@ -1,6 +1,8 @@
 # FiboServices Project Make File
 # author: Patrick Lu
 
+.PHONY: test
+
 VIRTUALENV = $(shell which virtualenv)
 
 clean: 
@@ -11,15 +13,11 @@ clean:
 
 venv:
 	$(VIRTUALENV) venv
-
 install: venv
 	. venv/bin/activate; python setup.py install
-
-launch: venv
+launch: venv install 
 	. venv/bin/activate; python ./calcRestService.py &
-
-test: 
-	. venv/bin/activate; python ./test/FiboService_test.py 
-
+test: venv
+	. venv/bin/activate; python ./test/FiboService_test.py -v
 shutdown:
-	ps -ef | grep "calcRestService.py" | grep -v grep | awk '{print $$2}' | xargs kill  
+	ps -ef | grep "calcRestService.py" | grep -v grep | awk '{print $$2}' | xargs kill

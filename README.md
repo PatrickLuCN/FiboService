@@ -17,7 +17,7 @@ Features
 Requirements
 ============
 
-* Python 2.7
+* Python 2.7 or 3.x
 * virtualenv is recommened to install before deploy the service (or the makefile will complain)
 * Python Flask library is required (this will be covered if you choose to use makefile)
 * Works on Linux, Windows, Mac OSX and (quite possibly) BSD.
@@ -32,12 +32,12 @@ The quick way is use the provided `make` file.
  
 ```
 $ make install
-```
+```  
 
-##Starting and Stopping Services:
+#Starting and Stopping Services:
 ==============================
 
-* To launch the service:
+* To launch the service:  
 
 ```
 $ make launch
