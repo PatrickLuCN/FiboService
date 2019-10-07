@@ -12,7 +12,14 @@ clean:
 	rm -fr dist
 
 venv:
-	$(VIRTUALENV) venv
+    ifdef VIRTUALENV
+		$(VIRTUALENV) venv
+    else
+		easy_install pip
+		python -m pip install -U pip
+		pip install virtualenv
+		$(VIRTUALENV) venv
+    endif	
 install: venv
 	. venv/bin/activate; python setup.py install
 launch: venv install 

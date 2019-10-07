@@ -34,7 +34,7 @@ The quick way is use the provided `make` file.
 $ make install
 ```  
 
-#Starting and Stopping Services:
+Starting and Stopping Services:
 ==============================
 
 * To launch the service:  
