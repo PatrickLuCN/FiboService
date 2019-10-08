@@ -3,23 +3,21 @@
 
 .PHONY: test
 
-VIRTUALENV = $(shell which virtualenv)
+VIRTUALENV := $(shell which virtualenv 2> /dev/null)
 
-clean: 
+clean:
 	rm -fr FiboService.egg-info
 	rm -fr venv
 	rm -fr build
 	rm -fr dist
 
 venv:
-    ifdef VIRTUALENV
-		$(VIRTUALENV) venv
-    else
-		easy_install pip
-		python -m pip install -U pip
-		pip install virtualenv
-		$(VIRTUALENV) venv
-    endif	
+ifndef VIRTUALENV
+	easy_install pip
+	python -m pip install -U pip
+	pip install virtualenv
+endif
+	virtualenv venv
 install: venv
 	. venv/bin/activate; python setup.py install
 launch: venv install 
